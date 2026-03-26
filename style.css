@@ -653,14 +653,14 @@ textarea {
 
 .hero {
   position: relative;
-  padding: 132px 0 108px;
+  padding: 132px 0 0;
 }
 
 .hero::before {
   content: none;
 }
 
-.hero-card {
+/* .hero-card {
   position: relative;
   z-index: 3;
   overflow: visible;
@@ -671,6 +671,68 @@ textarea {
   padding-right: min(14vw, 120px);
   border-radius: var(--radius-xl);
   border: none;
+  clip-path: polygon(
+  0 0,
+  100% 0,
+  100% 100%,
+
+  55.5% 100%,
+  54.2% 100%,
+  54.0% 100%,
+  53.5% 100%,
+  53.0% 99.9%,
+  52.8% 99.9%,
+  52.5% 99.8%,
+  52.3% 99.8%,
+  52.0% 99.7%,
+  51.8% 99.7%,
+  51.5% 99.6%,
+  51.2% 99.4%,
+  50.5% 98.8%,
+  50.0% 98.5%,
+  49.7% 98.5%,
+  48.3% 97.1%,
+  47.1% 95.2%,
+  46.3% 92.8%,
+  46.0% 90.6%,
+  45.7% 89.2%,
+  45.0% 88.3%,
+  43.8% 88%,
+
+  1.8% 88%,
+  1.7% 87%,
+  1.6% 86%,
+  1.5% 84.2%,
+  1.4% 84%,
+  0 84.4%,
+  0 0
+); */
+
+.hero-card {
+  position: relative;
+  z-index: 3;
+  overflow: visible;
+  display: block;
+  min-height: 880px;
+  padding: 78px 56px 80px;
+  padding-left: clamp(116px, 12vw, 220px);
+  padding-right: min(14vw, 120px);
+  border: none;
+
+  border-top-left-radius: 1.25rem;
+  border-top-right-radius: 1.25rem;
+  border-bottom-right-radius: 1.25rem;
+  border-bottom-left-radius: 0;
+
+  -webkit-mask-image: url("./mask.edbf30f5.svg");
+  mask-image: url("./mask.edbf30f5.svg");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  -webkit-mask-position: left bottom;
+  mask-position: left bottom;
+
   background:
     radial-gradient(circle at 72% 88%, rgba(98, 255, 172, 0.24), transparent 0 20%, rgba(35, 136, 82, 0.22) 36%, transparent 60%),
     radial-gradient(circle at 22% 100%, rgba(78, 255, 159, 0.12), transparent 34%),
@@ -710,45 +772,6 @@ textarea {
 
 
 
-.hero-card-cut {
-  position: absolute;
-  right: 80px;
-  bottom: -1px;
-  width: 240px;
-  height: 80px;
-  background: #050507; /* hoặc cùng màu nền section ngoài */
-  border-top-left-radius: 40px;
-  border-top-right-radius: 28px;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  z-index: 5;
-  pointer-events: none;
-}
-
-.hero-card-cut::before {
-  content: "";
-  position: absolute;
-  left: -60px;
-  bottom: 0;
-  width: 60px;
-  height: 60px;
-  background: transparent;
-  border-bottom-right-radius: 60px;
-  box-shadow: 18px 18px 0 18px #050507; /* cùng màu nền ngoài */
-}
-
-.hero-card-cut::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: -1px;
-  width: 92px;
-  height: 28px;
-  background: #050507;
-  border-top-left-radius: 40px;
-}
-
-
 .hero-runway {
   position: absolute;
   left: 36px;
@@ -756,11 +779,12 @@ textarea {
   bottom: 0;
   z-index: 2;
   height: 108px;
+  width: auto;
   margin-top: 0;
   background:
     radial-gradient(circle at 12% 50%, rgba(57, 255, 166, 0.08), transparent 16%),
     linear-gradient(180deg, rgba(5, 7, 15, 0.98), rgba(4, 6, 11, 0.98));
-  border-radius: 0 34px 0 0;
+  border-radius: 34px 34px 34px 34px;
   overflow: hidden;
   box-shadow:
     0 22px 60px rgba(0, 0, 0, 0.3),
@@ -1022,9 +1046,9 @@ textarea {
 .hero-phone-base {
   position: absolute;
   right: 0;
-  left: 90px;
+  left: -100px;
   bottom: 200px;
-  width: min(25.5rem, 55%);
+  width: min(32rem, 80%);
   max-width: none;
   display: block;
   object-fit: contain;
@@ -1385,6 +1409,20 @@ body.faq-open {
   .hero-card {
     min-height: auto;
     padding: 420px 40px 56px;
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% 100%,
+      58% 100%,
+      56% 99.4%,
+      54.7% 97.6%,
+      53.8% 94.4%,
+      53.2% 90.6%,
+      52.8% 86%,
+      2.6% 86%,
+      0 80.6%,
+      0 0
+    );
   }
 
   .about-cards,
@@ -1474,6 +1512,19 @@ body.faq-open {
 
   .hero-card {
     padding: 360px 24px 40px;
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% 100%,
+      63% 100%,
+      60.2% 98.8%,
+      58.5% 95.6%,
+      57.3% 90.6%,
+      56.8% 84%,
+      3.8% 84%,
+      0 76.8%,
+      0 0
+    );
   }
 
   .hero-copy h1 {
@@ -1504,7 +1555,7 @@ body.faq-open {
     width: calc(100% - 24px);
     height: 82px;
     margin-top: -24px;
-    border-radius: 0 24px 0 0;
+    border-radius: 24px;
   }
 
   .hero-marquee {
@@ -1570,6 +1621,19 @@ body.faq-open {
 
   .hero-card {
     padding: 330px 24px 32px;
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% 100%,
+      66% 100%,
+      62.4% 98.5%,
+      60.1% 94.2%,
+      58.9% 87.6%,
+      58.4% 80%,
+      4.6% 80%,
+      0 71.2%,
+      0 0
+    );
   }
 
   .hero-media-stack {
@@ -1586,20 +1650,6 @@ body.faq-open {
   .hero-media-underlay {
     width: min(12.5rem, 56%);
     bottom: -38px;
-  }
-
-  .hero-card-cut {
-    right: 38px;
-    width: 118px;
-    height: 58px;
-    border-top-left-radius: 26px;
-    border-top-right-radius: 26px;
-  }
-
-  .hero-card-cut::before {
-    left: -38px;
-    width: 76px;
-    height: 76px;
   }
 
   .hero-runway {
