@@ -135,18 +135,21 @@ faqItems.forEach(function (item) {
 });
 
 if (typingTarget && typingValue) {
-  var fullText = typingTarget.getAttribute("data-text") || typingValue.textContent || "";
+  var textList = ["HIGH LIMITS", "FOR RENT"];
+  var textIndex = 0;
   var currentIndex = 0;
   var isDeleting = false;
 
   typingValue.textContent = "";
 
   function runTypingLoop() {
+    var currentText = textList[textIndex];
+
     if (!isDeleting) {
       currentIndex += 1;
-      typingValue.textContent = fullText.slice(0, currentIndex);
+      typingValue.textContent = currentText.slice(0, currentIndex);
 
-      if (currentIndex === fullText.length) {
+      if (currentIndex === currentText.length) {
         isDeleting = true;
         setTimeout(runTypingLoop, 1400);
         return;
@@ -157,10 +160,11 @@ if (typingTarget && typingValue) {
     }
 
     currentIndex -= 1;
-    typingValue.textContent = fullText.slice(0, currentIndex);
+    typingValue.textContent = currentText.slice(0, currentIndex);
 
     if (currentIndex === 0) {
       isDeleting = false;
+      textIndex = (textIndex + 1) % textList.length;
       setTimeout(runTypingLoop, 360);
       return;
     }
@@ -170,3 +174,4 @@ if (typingTarget && typingValue) {
 
   setTimeout(runTypingLoop, 500);
 }
+
