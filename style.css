@@ -315,12 +315,12 @@ textarea {
 }
 
 .site-header .container {
-  width: min(100% - 20px, 1880px);
+  width: min(100% - 80px, 1880px);
   pointer-events: none;
 }
 
 .hero .container {
-  width: min(100% - 20px, 1880px);
+  width: min(100% - 80px, 1880px);
 }
 
 .nav-card,
@@ -343,7 +343,7 @@ textarea {
   transform: translateX(-50%);
   z-index: 1000;
 
-  width: min(100% - 20px, 1880px);
+  width: min(100% - 80px, 1880px);
   min-height: 78px;
   padding: 0 24px;
 
@@ -660,60 +660,12 @@ textarea {
   content: none;
 }
 
-/* .hero-card {
-  position: relative;
-  z-index: 3;
-  overflow: visible;
-  display: block;
-  min-height: 880px;
-  padding: 78px 56px 80px;
-  padding-left: clamp(116px, 12vw, 220px);
-  padding-right: min(14vw, 120px);
-  border-radius: var(--radius-xl);
-  border: none;
-  clip-path: polygon(
-  0 0,
-  100% 0,
-  100% 100%,
-
-  55.5% 100%,
-  54.2% 100%,
-  54.0% 100%,
-  53.5% 100%,
-  53.0% 99.9%,
-  52.8% 99.9%,
-  52.5% 99.8%,
-  52.3% 99.8%,
-  52.0% 99.7%,
-  51.8% 99.7%,
-  51.5% 99.6%,
-  51.2% 99.4%,
-  50.5% 98.8%,
-  50.0% 98.5%,
-  49.7% 98.5%,
-  48.3% 97.1%,
-  47.1% 95.2%,
-  46.3% 92.8%,
-  46.0% 90.6%,
-  45.7% 89.2%,
-  45.0% 88.3%,
-  43.8% 88%,
-
-  1.8% 88%,
-  1.7% 87%,
-  1.6% 86%,
-  1.5% 84.2%,
-  1.4% 84%,
-  0 84.4%,
-  0 0
-); */
-
 .hero-card {
   position: relative;
   z-index: 3;
   overflow: visible;
   display: block;
-  min-height: 880px;
+  min-height: 760px;
   padding: 78px 56px 80px;
   padding-left: clamp(116px, 12vw, 220px);
   padding-right: min(14vw, 120px);
@@ -774,16 +726,14 @@ textarea {
 
 .hero-runway {
   position: absolute;
-  left: 36px;
+  left: 0px;
   right: 36px;
-  bottom: 0;
+  bottom: -11px;
   z-index: 2;
   height: 108px;
   width: auto;
   margin-top: 0;
-  background:
-    radial-gradient(circle at 12% 50%, rgba(57, 255, 166, 0.08), transparent 16%),
-    linear-gradient(180deg, rgba(5, 7, 15, 0.98), rgba(4, 6, 11, 0.98));
+  background: transparent;
   border-radius: 34px 34px 34px 34px;
   overflow: hidden;
   box-shadow:
@@ -796,6 +746,7 @@ textarea {
   content: "";
   position: absolute;
   pointer-events: none;
+  display: none;
 }
 
 .hero-runway::before {
@@ -821,7 +772,7 @@ textarea {
   z-index: 1;
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 30px;
   height: 100%;
   overflow: hidden;
   mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
@@ -830,9 +781,19 @@ textarea {
 .hero-marquee-track {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 30px;
   min-width: max-content;
-  animation: hero-marquee 28s linear infinite;
+  animation: hero-marquee 4s linear infinite;
+}
+
+.hero-marquee-track img {
+  display: block;
+  width: auto;
+  height: 45px;
+  max-width: 150px;
+  object-fit: contain;
+  opacity: 0.92;
+  filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.18));
 }
 
 .hero-marquee-track span {
@@ -852,16 +813,23 @@ textarea {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
 }
 
-.hero-copy,
-.hero-media-stack {
-  position: relative;
-  z-index: 1;
-}
-
 .hero-copy {
-  max-width: 620px;
+  position: relative;
+  z-index: 3;
+  max-width: min(620px, calc(100% - min(40rem, 42vw) - 7rem));
   padding-top: 80px;
   margin-left: 124px;
+  transform: translateY(-55px);
+}
+
+.hero-media-stack {
+  position: absolute;
+  z-index: 1;
+  top: 60%;
+  right: clamp(2rem, 6vw, 8rem);
+  width: min(40rem, 42vw);
+  height: min(38rem, 70vh);
+  transform: translateY(-45%);
 }
 
 .hero-badge {
@@ -948,7 +916,7 @@ textarea {
 .typing-text {
   position: relative;
   display: inline-block;
-  min-width: 12ch;
+  min-width: 16ch;
   max-width: 100%;
   min-height: 1.2em;
   line-height: 0.92;
@@ -1010,15 +978,6 @@ textarea {
   background: rgba(255, 255, 255, 0.04);
   color: rgba(245, 247, 241, 0.82);
   font-size: 13px;
-}
-
-.hero-media-stack {
-  position: absolute;
-  top: 60%;
-  right: clamp(4rem, 8vw, 11rem);
-  width: min(40rem, 42vw);
-  height: min(38rem, 70vh);
-  transform: translateY(-50%);
 }
 
 .hero-phone-stage {
@@ -1461,6 +1420,8 @@ body.faq-open {
   .hero-copy {
     max-width: 100%;
     padding-top: 0;
+    margin-left: 0;
+    transform: translateY(0);
   }
 
   .hero-runway {
@@ -1472,6 +1433,11 @@ body.faq-open {
     min-height: 38px;
     padding: 0 16px;
     font-size: 0.88rem;
+  }
+
+  .hero-marquee-track img {
+    height: 30px;
+    max-width: 116px;
   }
 }
 
@@ -1559,17 +1525,22 @@ body.faq-open {
   }
 
   .hero-marquee {
-    gap: 18px;
+    gap: 8px;
   }
 
   .hero-marquee-track {
-    gap: 14px;
+    gap: 10px;
   }
 
   .hero-marquee-track span {
     min-height: 34px;
     padding: 0 14px;
     font-size: 0.82rem;
+  }
+
+  .hero-marquee-track img {
+    height: 26px;
+    max-width: 100px;
   }
 
   .about-cards,
@@ -1659,17 +1630,22 @@ body.faq-open {
   }
 
   .hero-marquee {
-    gap: 14px;
+    gap: 6px;
   }
 
   .hero-marquee-track {
-    gap: 12px;
+    gap: 8px;
   }
 
   .hero-marquee-track span {
     min-height: 30px;
     padding: 0 12px;
     font-size: 0.76rem;
+  }
+
+  .hero-marquee-track img {
+    height: 22px;
+    max-width: 84px;
   }
 
   .hero-stack-hint {
@@ -1718,7 +1694,7 @@ body.faq-open {
   }
 
   100% {
-    transform: translateX(calc(-100% - 28px));
+    transform: translateX(calc(-100% - 30px));
   }
 }
 

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" preserveAspectRatio="none">
+  <path fill="white" d="
+    M 0 0
+    H 1000
+    V 1000
+    H 620
+    C 610 1000, 600 998, 592 992
+    C 580 982, 572 965, 570 940
+    H 430
+    C 428 965, 420 982, 408 992
+    C 400 998, 390 1000, 380 1000
+    H 0
+    Z
+  "/>
+</svg>
