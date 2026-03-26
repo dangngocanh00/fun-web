@@ -129,6 +129,7 @@ textarea {
 }
 
 .container {
+  position: relative;
   width: min(var(--container), calc(100% - 40px));
   margin: 0 auto;
 }
@@ -652,7 +653,7 @@ textarea {
 
 .hero {
   position: relative;
-  padding: 132px 0 0;
+  padding: 132px 0 108px;
 }
 
 .hero::before {
@@ -661,7 +662,8 @@ textarea {
 
 .hero-card {
   position: relative;
-  overflow: hidden;
+  z-index: 3;
+  overflow: visible;
   display: block;
   min-height: 880px;
   padding: 78px 56px 80px;
@@ -706,25 +708,55 @@ textarea {
   pointer-events: none;
 }
 
+
+
 .hero-card-cut {
   position: absolute;
-  right: -1px;
+  right: 80px;
   bottom: -1px;
-  width: clamp(170px, 18vw, 280px);
-  height: clamp(92px, 10vw, 132px);
-  background: var(--bg);
-  clip-path: polygon(34% 0, 100% 0, 100% 100%, 0 100%);
-  border-top-left-radius: 52px;
-  z-index: 3;
+  width: 240px;
+  height: 80px;
+  background: #050507; /* hoặc cùng màu nền section ngoài */
+  border-top-left-radius: 40px;
+  border-top-right-radius: 28px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  z-index: 5;
   pointer-events: none;
 }
 
+.hero-card-cut::before {
+  content: "";
+  position: absolute;
+  left: -60px;
+  bottom: 0;
+  width: 60px;
+  height: 60px;
+  background: transparent;
+  border-bottom-right-radius: 60px;
+  box-shadow: 18px 18px 0 18px #050507; /* cùng màu nền ngoài */
+}
+
+.hero-card-cut::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -1px;
+  width: 92px;
+  height: 28px;
+  background: #050507;
+  border-top-left-radius: 40px;
+}
+
+
 .hero-runway {
-  position: relative;
+  position: absolute;
+  left: 36px;
+  right: 36px;
+  bottom: 0;
   z-index: 2;
-  width: calc(100% - 72px);
   height: 108px;
-  margin-top: -34px;
+  margin-top: 0;
   background:
     radial-gradient(circle at 12% 50%, rgba(57, 255, 166, 0.08), transparent 16%),
     linear-gradient(180deg, rgba(5, 7, 15, 0.98), rgba(4, 6, 11, 0.98));
@@ -735,20 +767,22 @@ textarea {
     inset 0 1px 0 rgba(255, 255, 255, 0.04);
 }
 
-.hero-runway::before {
+.hero-runway::before,
+.hero-runway::after {
   content: "";
   position: absolute;
+  pointer-events: none;
+}
+
+.hero-runway::before {
   inset: 0;
   background:
     linear-gradient(90deg, transparent 0 72%, rgba(255, 255, 255, 0.08) 72% 72.2%, transparent 72.2%),
     linear-gradient(90deg, transparent 0 84%, rgba(255, 255, 255, 0.08) 84% 84.2%, transparent 84.2%),
     linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent 34%);
-  pointer-events: none;
 }
 
 .hero-runway::after {
-  content: "";
-  position: absolute;
   left: 24px;
   top: 50%;
   width: 180px;
@@ -756,7 +790,6 @@ textarea {
   background: radial-gradient(circle, rgba(58, 255, 165, 0.16), transparent 70%);
   filter: blur(24px);
   transform: translateY(-50%);
-  pointer-events: none;
 }
 
 .hero-marquee {
@@ -1556,9 +1589,17 @@ body.faq-open {
   }
 
   .hero-card-cut {
-    width: 128px;
-    height: 70px;
-    border-top-left-radius: 28px;
+    right: 38px;
+    width: 118px;
+    height: 58px;
+    border-top-left-radius: 26px;
+    border-top-right-radius: 26px;
+  }
+
+  .hero-card-cut::before {
+    left: -38px;
+    width: 76px;
+    height: 76px;
   }
 
   .hero-runway {

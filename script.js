@@ -135,7 +135,7 @@ faqItems.forEach(function (item) {
 });
 
 if (typingTarget && typingValue) {
-  var textList = ["HIGH LIMITS", "FOR RENT"];
+  var textList = ["NO LIMITS","UNLIMITED SPEND","HIGH TRUST","HARD NICHES","LOW FEES", "FOR RENT"];
   var textIndex = 0;
   var currentIndex = 0;
   var isDeleting = false;
