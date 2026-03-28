@@ -801,10 +801,12 @@ textarea {
   mask-position: left bottom;
 
   background:
-    url("./public/FBLease Agency & Dolphin Agency (24).png") no-repeat center center / cover,
-    radial-gradient(circle at 72% 88%, rgba(185, 253, 80, 0.24), transparent 0 20%, rgba(185, 253, 80, 0.16) 36%, transparent 60%),
-    radial-gradient(circle at 22% 100%, rgba(185, 253, 80, 0.12), transparent 34%),
-    linear-gradient(135deg, rgba(213, 255, 143, 0.94), rgba(157, 255, 87, 0.94) 48%, rgba(71, 214, 106, 0.94) 100%);
+  url("./public/FBLease Agency & Dolphin Agency (24).png") no-repeat center center / cover,
+  radial-gradient(circle at 78% 86%, rgba(110, 255, 190, 0.24), transparent 0 18%, rgba(53, 255, 138, 0.14) 36%, transparent 60%),
+  radial-gradient(circle at 18% 100%, rgba(185, 253, 80, 0.18), transparent 32%),
+  radial-gradient(circle at 8% 18%, rgba(71, 214, 106, 0.12), transparent 22%),
+  radial-gradient(circle at top right, rgba(120, 140, 255, 0.08), transparent 26%),
+  linear-gradient(180deg, rgba(9, 11, 18, 0.97), rgba(3, 5, 10, 0.99));
   background-size: cover, auto, auto, auto;
   background-position: center, 72% 88%, 22% 100%, center;
   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
@@ -1431,6 +1433,7 @@ textarea {
   mask-size: 100% 100%;
   -webkit-mask-position: center;
   mask-position: center;
+  clip-path: polygon(0 20px, 20px 0, calc(100% - 48px) 0, 100% 48px, 100% calc(100% - 20px), calc(100% - 20px) 100%, 20px 100%, 0 calc(100% - 20px));
 }
 
 .info-card::before {
@@ -2414,14 +2417,7 @@ textarea {
     0 28px 62px rgba(255, 255, 255, 0.9),
     0 12px 28px rgb(255, 255, 255),
     inset 0 1px 0 rgba(255, 255, 255, 0.08);
-  -webkit-mask-image: url("./mask.53689dd1.svg");
-  mask-image: url("./mask.53689dd1.svg");
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-size: 100% 100%;
-  mask-size: 100% 100%;
-  -webkit-mask-position: center;
-  mask-position: center;
+  clip-path: polygon(0 12px, 12px 0, calc(100% - 24px) 0, 100% 24px, 100% calc(100% - 12px), calc(100% - 12px) 100%, 12px 100%, 0 calc(100% - 12px));
   transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
