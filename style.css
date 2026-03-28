@@ -98,9 +98,7 @@ textarea {
   overflow-x: hidden;
   position: relative;
   background:
-    radial-gradient(circle at 18% 110%, rgba(41, 255, 138, 0.14), transparent 28%),
-    radial-gradient(circle at 82% 96%, rgba(84, 255, 173, 0.12), transparent 24%),
-    linear-gradient(180deg, #030405 0%, #040605 32%, #07120c 72%, #0a2416 100%);
+    linear-gradient(180deg, rgba(7, 10, 28, 0.96), rgba(3, 6, 18, 0.99));
 }
 
 .page-shell::before {
@@ -806,7 +804,7 @@ textarea {
     url("./public/FBLease Agency & Dolphin Agency (24).png") no-repeat center center / cover,
     radial-gradient(circle at 72% 88%, rgba(185, 253, 80, 0.24), transparent 0 20%, rgba(185, 253, 80, 0.16) 36%, transparent 60%),
     radial-gradient(circle at 22% 100%, rgba(185, 253, 80, 0.12), transparent 34%),
-    linear-gradient(180deg, rgba(7, 9, 10, 1) 0%, rgba(8, 12, 10, 0.995) 42%, rgba(12, 30, 19, 0.98) 72%, rgba(16, 48, 30, 0.98) 100%);
+    linear-gradient(135deg, rgba(213, 255, 143, 0.94), rgba(157, 255, 87, 0.94) 48%, rgba(71, 214, 106, 0.94) 100%);
   background-size: cover, auto, auto, auto;
   background-position: center, 72% 88%, 22% 100%, center;
   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
@@ -1242,17 +1240,11 @@ textarea {
 }
 
 #benefits::before {
-  background:
-    radial-gradient(circle at 88% 24%, rgba(157, 255, 87, 0.12), transparent 24%),
-    linear-gradient(180deg, transparent 0 18%, rgba(255, 255, 255, 0.018) 18% 18.08%, transparent 18.08% 100%),
-    linear-gradient(180deg, rgba(7, 12, 9, 0.3), rgba(7, 12, 9, 0.14));
+  display: none;
 }
 
 #contact::before {
-  background:
-    radial-gradient(circle at 18% 84%, rgba(213, 255, 143, 0.08), transparent 22%),
-    radial-gradient(circle at 82% 14%, rgba(71, 214, 106, 0.11), transparent 20%),
-    linear-gradient(180deg, rgba(7, 12, 9, 0.28), rgba(7, 12, 9, 0.14));
+  display: none;
 }
 
 .about-layout,
@@ -1426,8 +1418,8 @@ textarea {
   padding: 1.15rem 1.15rem 0.75rem;
   border: none;
   background:
-    radial-gradient(circle at top right, rgba(156, 124, 255, 0.2), transparent 26%),
-    linear-gradient(180deg, rgba(40, 28, 74, 0.96), rgba(20, 14, 42, 0.98));
+  radial-gradient(circle at top right, rgba(255, 255, 255, 0.05), transparent 26%),
+  linear-gradient(180deg, rgba(10, 10, 14, 0.97), rgba(4, 4, 8, 0.99));
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
@@ -1753,8 +1745,8 @@ textarea {
   display: flex;
   border: 1px solid rgba(255, 255, 255, 0.12);
   background:
-    radial-gradient(circle at top right, rgba(255, 255, 255, 0.06), transparent 26%),
-    linear-gradient(180deg, rgba(38, 26, 74, 0.9), rgba(26, 20, 48, 0.92));
+  radial-gradient(circle at top right, rgba(120, 140, 255, 0.08), transparent 26%),
+  linear-gradient(180deg, rgba(9, 11, 18, 0.97), rgba(3, 5, 10, 0.99));
   min-height: 0;
 }
 
@@ -1836,8 +1828,8 @@ textarea {
 .benefit-card--trust {
   padding: 30px 30px 24px;
   background:
-  radial-gradient(circle at top right, rgba(88, 118, 255, 0.18), transparent 28%),
-  linear-gradient(180deg, rgba(7, 10, 28, 0.96), rgba(3, 6, 18, 0.99));
+  radial-gradient(circle at top right, rgba(120, 140, 255, 0.08), transparent 26%),
+  linear-gradient(180deg, rgba(9, 11, 18, 0.97), rgba(3, 5, 10, 0.99));
 }
 
 .benefit-card--trust::after {
@@ -1934,9 +1926,9 @@ textarea {
 
 .benefit-card--limit:hover {
   background:
-    radial-gradient(circle at 50% 118%, rgba(185, 253, 80, 0.34), transparent 34%),
-    radial-gradient(circle at top right, rgba(88, 118, 255, 0.18), transparent 28%),
-    linear-gradient(180deg, rgba(7, 10, 28, 0.96), rgba(3, 6, 18, 0.99));
+  radial-gradient(circle at 50% 118%, rgba(185, 253, 80, 0.34), transparent 34%),
+  radial-gradient(circle at top right, rgba(120, 140, 255, 0.08), transparent 26%),
+  linear-gradient(180deg, rgba(9, 11, 18, 0.97), rgba(3, 5, 10, 0.99));
 
   box-shadow:
     0 22px 54px rgba(185, 253, 80, 0.14),
@@ -1949,8 +1941,8 @@ textarea {
   padding: 18px 22px 26px;
   justify-content: space-between;
   background:
-  radial-gradient(circle at top right, rgba(88, 118, 255, 0.18), transparent 28%),
-  linear-gradient(180deg, rgba(7, 10, 28, 0.96), rgba(3, 6, 18, 0.99));
+  radial-gradient(circle at top right, rgba(120, 140, 255, 0.08), transparent 26%),
+  linear-gradient(180deg, rgba(9, 11, 18, 0.97), rgba(3, 5, 10, 0.99));
   transition: background 0.35s ease, box-shadow 0.35s ease;
 }
 
@@ -2063,8 +2055,10 @@ textarea {
   align-items: flex-end;
   padding: 24px 24px 26px;
   background:
-    radial-gradient(circle at top right, rgba(88, 118, 255, 0.18), transparent 28%),
-    linear-gradient(180deg, rgba(7, 10, 28, 0.96), rgba(3, 6, 18, 0.99));
+    url("./public/62.png") no-repeat center center / cover,
+    radial-gradient(circle at top right, rgba(120, 140, 255, 0.08), transparent 26%),
+    linear-gradient(180deg, rgba(9, 11, 18, 0.97), rgba(3, 5, 10, 0.99));
+  transition: background 0.35s ease, box-shadow 0.35s ease;
 }
 
 .benefit-card__matrix {
@@ -2082,6 +2076,35 @@ textarea {
   max-width: 5ch;
 }
 
+.benefit-card--processing .benefit-card__content {
+  transform: translateY(120px);
+  transition: transform 0.35s ease;
+}
+
+.benefit-card--processing .benefit-card__content p {
+  margin-top: 12px;
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.benefit-card--processing:hover {
+  background:
+    linear-gradient(135deg, rgba(213, 255, 143, 0.94), rgba(157, 255, 87, 0.94) 48%, rgba(71, 214, 106, 0.94) 100%);
+  box-shadow:
+    0 20px 48px rgba(0, 0, 0, 0.24),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.benefit-card--processing:hover .benefit-card__content {
+  transform: translateY(-8px);
+}
+
+.benefit-card--processing:hover .benefit-card__content p {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .benefit-card--secure {
   padding: 30px 30px 24px;
   background:
@@ -2093,23 +2116,68 @@ textarea {
 .benefit-card--secure .benefit-card__image--secure {
   right: 18px;
   bottom: -6px;
-  width: min(43%, 260px);
+  width: min(43%, 200px);
   max-height: 92%;
 }
 
+.benefit-card--secure:hover {
+  background:
+    url("./public/56.png") no-repeat center center / cover,
+    radial-gradient(circle at top right, rgba(120, 140, 255, 0.08), transparent 26%),
+  linear-gradient(180deg, rgba(9, 11, 18, 0.97), rgba(3, 5, 10, 0.99));
+}
+
+.benefit-card--secure:hover .benefit-card__content {
+  transform: translateY(8px) scale(1.04);
+  transform-origin: left center;
+}
+
+.benefit-card--secure:hover .benefit-card__image--secure {
+  transform: scale(1.08);
+  transform-origin: center bottom;
+}
+
+
 .benefit-card--rocket {
+  overflow: hidden;
   align-items: flex-end;
   justify-content: center;
   padding: 0;
+  isolation: isolate;
   background:
     linear-gradient(135deg, rgba(213, 255, 143, 0.94), rgba(157, 255, 87, 0.94) 48%, rgba(71, 214, 106, 0.94) 100%);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
 .benefit-card--rocket .benefit-card__image--rocket {
-  left: -10px;
-  bottom: -14px;
-  width: 108%;
-  max-width: none;
+  left: 25%;
+  bottom: -36px;
+  width: 78%;
+  max-width: 220px;
+  transform: translateX(-50%);
+  transform-origin: center bottom;
+  filter: drop-shadow(0 20px 24px rgba(20, 52, 12, 0.2));
+  transition:
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.35s ease;
+}
+
+.benefit-card--rocket:hover {
+  overflow: visible;
+  transform: translateY(-6px);
+  box-shadow:
+    0 26px 56px rgba(71, 214, 106, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.16);
+  background:
+    url("./public/62.png") no-repeat center center / cover,
+    radial-gradient(circle at top right, rgba(120, 140, 255, 0.08), transparent 26%),
+  linear-gradient(180deg, rgba(9, 11, 18, 0.97), rgba(3, 5, 10, 0.99));
+}
+
+.benefit-card--rocket:hover .benefit-card__image--rocket {
+  transform: translate3d(10%, -40px, 0) rotate(-7deg) scale(1.3);
+  filter: drop-shadow(0 34px 28px rgba(20, 52, 12, 0.28));
+
 }
 
 .benefit-card--service {
@@ -2118,8 +2186,8 @@ textarea {
   padding: 28px 24px 22px;
   background:
     url("./public/cskh.png") no-repeat center center / cover,
-    radial-gradient(circle at top right, rgba(88, 118, 255, 0.18), transparent 28%),
-    linear-gradient(180deg, rgba(7, 10, 28, 0.96), rgba(3, 6, 18, 0.99));
+    radial-gradient(circle at top right, rgba(120, 140, 255, 0.08), transparent 26%),
+  linear-gradient(180deg, rgba(9, 11, 18, 0.97), rgba(3, 5, 10, 0.99));
   transition: background 0.35s ease, box-shadow 0.35s ease;
 }
 
@@ -2181,9 +2249,10 @@ textarea {
   justify-content: center;
   padding: 24px;
   background:
-    radial-gradient(circle at 18% 84%, rgba(157, 255, 87, 0.28), transparent 22%),
-    radial-gradient(circle at 84% 88%, rgba(213, 255, 143, 0.34), transparent 20%),
-    linear-gradient(180deg, rgba(58, 84, 32, 0.96), rgba(28, 42, 24, 0.98));
+	  url("./public/56.png") no-repeat center center / cover,
+    radial-gradient(circle at top right, rgba(120, 140, 255, 0.08), transparent 26%),
+  linear-gradient(180deg, rgba(9, 11, 18, 0.97), rgba(3, 5, 10, 0.99));
+  transition: background 0.35s ease, box-shadow 0.35s ease;
 }
 
 .benefit-card__metric--small {
@@ -2196,6 +2265,22 @@ textarea {
   font-size: 1.05rem;
 }
 
+.benefit-card--team-stat .benefit-card__content {
+  transition: transform 0.35s ease;
+}
+
+.benefit-card--team-stat:hover {
+  background:
+    linear-gradient(135deg, rgba(213, 255, 143, 0.94), rgba(157, 255, 87, 0.94) 48%, rgba(71, 214, 106, 0.94) 100%);
+  box-shadow:
+    0 22px 54px rgba(71, 214, 106, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+.benefit-card--team-stat:hover .benefit-card__content {
+  transform: translateY(-10px) scale(1.04);
+}
+
 .benefits-grid .benefit-card:nth-child(1) { order: 1; }
 .benefits-grid .benefit-card:nth-child(2) { order: 2; }
 .benefits-grid .benefit-card:nth-child(3) { order: 3; }
@@ -2205,48 +2290,249 @@ textarea {
 .benefits-grid .benefit-card:nth-child(7) { order: 7; }
 .benefits-grid .benefit-card:nth-child(8) { order: 8; }
 
+
 .contact-card {
-  padding: 36px;
-  border-radius: var(--radius-xl);
-  background:
-    radial-gradient(circle at top right, rgba(157, 255, 87, 0.1), transparent 24%),
-    radial-gradient(circle at bottom left, rgba(71, 214, 106, 0.1), transparent 24%),
-    var(--panel-strong);
+  position: relative;
+  overflow: hidden;
+  padding: 90px 36px 48px;
+  border: none;
+  border-radius: 40px;
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  align-items: center;
+}
+
+.contact-card::before,
+.contact-card::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+
+.contact-card::before {
+  display: none;
+}
+
+.contact-card::after {
+  display: none;
 }
 
 .contact-copy h2 {
   margin: 18px 0 0;
   font-family: var(--font-main);
-  font-size: clamp(2rem, 4vw, 3.4rem);
-  line-height: 1;
-  letter-spacing: -0.04em;
+  font-size: clamp(3rem, 5vw, 5.5rem);
+  line-height: 0.92;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 
-.contact-points {
-  margin-top: 28px;
+.contact-copy {
+  position: relative;
+  z-index: 1;
+  max-width: 40rem;
 }
 
-.contact-point {
-  padding: 18px 20px;
-  border: 1px solid var(--line);
-  border-radius: 20px;
+.contact-copy .section-title-bg {
+  position: absolute;
+  
+  top: -80px;
+  z-index: 0;
+  width: max-content;
+  min-width: min(1060px, calc(100vw - 96px));
+  margin: 0;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.018);
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+  text-shadow: 0 0 26px rgba(255, 255, 255, 0.03);
+  transform: none;
+  pointer-events: none;
+  white-space: nowrap;
+  font-size: clamp(5rem, 12vw, 9rem);
+  letter-spacing: 0.04em;
+}
+
+.contact-copy .eyebrow {
+  margin-top: 26px;
   background: rgba(255, 255, 255, 0.04);
 }
 
-.contact-form {
-  display: grid;
-  gap: 16px;
+.contact-copy p {
+  max-width: 28rem;
+  margin-top: 20px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: rgba(245, 247, 241, 0.7);
 }
 
-.contact-form label {
-  display: grid;
-  gap: 10px;
+.contact-cta {
+  min-height: 58px;
+  margin-top: 34px;
+  padding: 0 28px;
+  background:
+    linear-gradient(135deg, rgba(213, 255, 143, 0.94), rgba(157, 255, 87, 0.94) 48%, rgba(71, 214, 106, 0.94) 100%);
+  color: #fff;
 }
 
-.contact-form span {
-  color: rgba(245, 247, 241, 0.84);
-  font-size: 13px;
+.contact-cta:hover {
+  background:
+    radial-gradient(circle at top right, rgba(88, 118, 255, 0.18), transparent 28%),
+    linear-gradient(180deg, rgba(7, 10, 28, 0.96), rgba(3, 6, 18, 0.99));
+  color: #fff;
+  box-shadow:
+    0 22px 40px rgba(62, 212, 130, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.32);
+}
+
+.contact-showcase {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 20px;
+  padding: 76px 0 8px;
+}
+
+.contact-panel {
+  position: relative;
+  width: min(100%, 270px);
+  min-height: 330px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  color: #fff;
+  text-decoration: none;
+  background:
+    radial-gradient(circle at top right, rgba(120, 140, 255, 0.08), transparent 26%),
+  linear-gradient(180deg, rgba(9, 11, 18, 0.97), rgba(3, 5, 10, 0.99));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow:
+    0 28px 62px rgba(255, 255, 255, 0.9),
+    0 12px 28px rgb(255, 255, 255),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  -webkit-mask-image: url("./mask.53689dd1.svg");
+  mask-image: url("./mask.53689dd1.svg");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-position: center;
+  mask-position: center;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.contact-panel:hover {
+  transform: translateY(-10px);
+  box-shadow:
+    0 36px 78px rgba(0, 0, 0, 0.52),
+    0 18px 42px rgba(188, 96, 255, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+.contact-panel--qr {
+  transform: translateY(38px);
+  background:
+    radial-gradient(circle at top right, rgba(120, 140, 255, 0.08), transparent 26%),
+  linear-gradient(180deg, rgba(9, 11, 18, 0.97), rgba(3, 5, 10, 0.99));
+}
+
+.contact-panel--qr:hover {
+  transform: translateY(26px);
+}
+
+.contact-panel--email {
+  transform: translateY(4px);
+}
+
+.contact-panel--email:hover {
+  transform: translateY(-6px);
+}
+.contact-panel--email {
+  background:
+    radial-gradient(circle at top right, rgba(120, 140, 255, 0.08), transparent 26%),
+  linear-gradient(180deg, rgba(9, 11, 18, 0.97), rgba(3, 5, 10, 0.99));
+}
+
+.contact-panel__media {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 248px;
+  padding: 22px;
+}
+
+
+
+.contact-panel__media img {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.contact-panel__media--qr {
+  padding: 26px;
+}
+
+.contact-panel__media--qr img {
+  max-width: 500px;
+  transform: translate3d(0, 0, 0) rotate(0deg) scale(1);
+  filter: drop-shadow(0 16px 28px rgba(118, 74, 255, 0.12));
+  transition:
+    transform 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.35s ease;
+}
+
+.contact-panel--qr:hover .contact-panel__media--qr img {
+  transform: translate3d(0, 0, 0) rotate(0deg) scale(1);
+  filter: drop-shadow(0 16px 28px rgba(118, 74, 255, 0.12));
+}
+
+.contact-panel__media--email {
+  align-items: end;
+  padding: 18px 14px 0;
+}
+
+.contact-panel__media--email img {
+  max-width: 180px;
+  transform: translateY(0) scale(1.8);
+  transform-origin: center bottom;
+}
+
+.contact-panel__band {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 16px 18px 14px;
+  background:
+    linear-gradient(135deg, rgba(213, 255, 143, 0.94), rgba(157, 255, 87, 0.94) 48%, rgba(71, 214, 106, 0.94) 100%);
+}
+
+.contact-panel__band strong {
+  margin: 0;
+  font-size: 1.9rem;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.contact-panel__band span {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.contact-panel__meta {
+  padding: 0 18px 14px;
+  color: rgba(223, 230, 255, 0.78);
+  font-size: 0.96rem;
   font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
 .site-footer {
@@ -2374,6 +2660,43 @@ body.faq-open {
   .hero-card,
   .contact-card {
     grid-template-columns: 1fr;
+  }
+
+  .contact-card {
+    padding: 120px 60px 100px;
+  }
+
+  .contact-card::after {
+    width: min(92%, 720px);
+    top: auto;
+    bottom: 0;
+    right: -18%;
+    height: 56%;
+    border-left: 1px solid rgba(255, 255, 255, 0.08);
+    border-top: none;
+    border-radius: 44px 0 0 0;
+    transform: none;
+  }
+
+  .contact-copy {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .contact-copy .section-title-bg,
+  .contact-copy p {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contact-copy .eyebrow {
+    justify-content: center;
+  }
+
+  .contact-showcase {
+    justify-content: center;
+    padding-top: 12px;
   }
 
   .users-banner__inner {
@@ -2656,6 +2979,51 @@ body.faq-open {
     max-width: 100px;
   }
 
+  .contact-card {
+    padding: 34px 24px 28px;
+    border-radius: 28px;
+  }
+
+  .contact-card::before {
+    inset: 0;
+    border-radius: 28px;
+  }
+
+  .contact-card::after {
+    display: none;
+  }
+
+  .contact-copy .section-title-bg {
+    margin-bottom: -2.5rem;
+    font-size: clamp(3.8rem, 18vw, 6rem);
+    white-space: normal;
+  }
+
+  .contact-copy h2 {
+    font-size: clamp(2.5rem, 12vw, 4rem);
+  }
+
+  .contact-showcase {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+
+  .contact-panel,
+  .contact-panel--qr,
+  .contact-panel--qr:hover {
+    width: 100%;
+    transform: none;
+  }
+
+  .contact-panel {
+    min-height: 0;
+  }
+
+  .contact-panel__media {
+    min-height: 220px;
+  }
+
   .about-cards,
   .benefits-grid {
     grid-template-columns: 1fr;
@@ -2698,6 +3066,23 @@ body.faq-open {
   .hero-actions .button,
   .mobile-menu .button {
     width: 100%;
+  }
+
+  .contact-copy .section-title-bg {
+    margin-bottom: -1.9rem;
+    letter-spacing: 0.03em;
+  }
+
+  .contact-cta {
+    width: 100%;
+  }
+
+  .contact-panel__band strong {
+    font-size: 1.45rem;
+  }
+
+  .contact-panel__meta {
+    font-size: 0.88rem;
   }
 
   .faq-screen-header {
