@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell($lines = Get-Content c:\\\\Dulieu\\\\fun-web\\\\style.css; $lines.Count)",
+      "PowerShell($lines = Get-Content c:\\\\Dulieu\\\\fun-web\\\\style.css; Write-Output \"Line 2719: $\\($lines[2718]\\)\"; Write-Output \"Line 3255: $\\($lines[3254]\\)\"; Write-Output \"Line 3256: $\\($lines[3255]\\)\"; Write-Output \"Line 3257: $\\($lines[3256]\\)\")"
+    ]
+  }
+}
