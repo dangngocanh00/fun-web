@@ -990,7 +990,7 @@ textarea {
   position: absolute;
   right: 0;
   left: -20px;
-  bottom: 0;
+  bottom: 50px;
   width: min(25.5rem, 64%);
   max-width: none;
   display: block;
