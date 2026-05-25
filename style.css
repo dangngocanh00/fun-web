@@ -2776,15 +2776,451 @@ body.faq-open {
     height: min(34rem, 64vh);
   }
 
+  .hero-runway {
+    height: 72px;
+    bottom: -24px;
+  }
+
+  .hero-marquee-track img {
+    height: 30px;
+    max-width: 100px;
+  }
+
   .about-cards {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     column-gap: 14px;
     row-gap: 12px;
   }
 
-  .benefits-grid {
-    gap: 18px;
-    grid-auto-rows: 100px;
+  .info-card {
+    min-height: 13rem;
+    padding: 1rem 1rem 0.6rem;
+    background:
+      radial-gradient(circle at top right, rgba(255, 255, 255, 0.12), transparent 28%),
+      radial-gradient(circle at bottom left, rgba(255, 255, 255, 0.06), transparent 26%),
+      radial-gradient(ellipse at 80% 0%, rgba(100, 220, 140, 0.18), transparent 40%),
+      radial-gradient(ellipse at 10% 90%, rgba(60, 140, 220, 0.14), transparent 38%),
+      radial-gradient(ellipse at 50% 50%, rgba(80, 60, 180, 0.1), transparent 60%),
+      linear-gradient(160deg, rgba(8, 20, 42, 0.98), rgba(5, 16, 36, 0.99) 55%, rgba(3, 12, 28, 1));
+    border: 1.5px solid rgba(255, 255, 255, 0.28);
+  }
+
+  .info-card__inner {
+    margin-left: 14px;
+    width: min(58%, 13rem);
+  }
+
+  .about-card h3 {
+    font-size: clamp(1rem, 1.6vw, 1.2rem);
+    font-weight: 800;
+    text-shadow: 0 1px 12px rgba(255, 255, 255, 0.25);
+  }
+
+  .info-card__media {
+    filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.2)) brightness(1.15);
+  }
+
+  .about-cards img:not(.info-card__media) {
+    display: none;
+  }
+
+  .info-card::before,
+  .benefit-card::before {
+    display: none;
+  }
+
+  .info-card::after,
+  .about-card:nth-child(even)::after,
+  .low-rate-card::after,
+  .analytics-card::after,
+  .team-card::after,
+  .support-card::after,
+  .manage-card::after,
+  .topup-card::after {
+    background: url("./mask.1ea07874.svg") no-repeat center / 100% 100%;
+    opacity: 0.65;
+  }
+
+  .benefit-card--needs::after,
+  .benefit-card--service::after {
+    display: none;
+  }
+
+  /* ================= BENEFITS <= 1200px ================= */
+
+  .benefits-title {
+    margin-bottom: 62px;
+    padding: 42px 0 18px;
+    overflow: visible;
+  }
+
+  .benefits-title .section-title-bg {
+    position: absolute;
+    top: -4px;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    font-size: clamp(6rem, 11vw, 8.8rem);
+    line-height: 0.9;
+    letter-spacing: 0.08em;
+    opacity: 0.14;
+    transform: none;
+  }
+
+  .benefits-title h2 {
+    position: relative;
+    z-index: 2;
+    margin-top: 0;
+    font-size: clamp(3rem, 5vw, 4.2rem);
+    line-height: 0.95;
+  }
+
+  .benefit-card--rocket,
+  .benefit-card--service {
+    display: none;
+  }
+
+  #benefits .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 250px 26px;
+    align-items: stretch;
+  }
+
+  #benefits .benefits-grid .benefit-card,
+  #benefits .benefit-card--wide,
+  #benefits .benefit-card--tall,
+  #benefits .benefit-card--square {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  #benefits .benefits-grid .benefit-card {
+    position: relative;
+    width: 100%;
+    min-width: 0;
+    height: auto;
+    overflow: hidden;
+    box-sizing: border-box;
+    border-radius: 30px;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    transform: none;
+    grid-area: auto;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    background:
+      radial-gradient(circle at 78% 45%, rgba(146, 255, 82, 0.28), transparent 22%),
+      linear-gradient(135deg, rgba(12, 24, 22, 0.98), rgba(8, 16, 27, 0.98));
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.06),
+      0 18px 46px rgba(0, 0, 0, 0.24);
+  }
+
+  #benefits .benefits-grid .benefit-card--trust {
+    order: 1;
+    grid-column: 1 / -1;
+    min-height: 315px;
+    padding: 48px 56px;
+  }
+
+  #benefits .benefits-grid .benefit-card--limit {
+    order: 2;
+    min-height: 315px;
+    padding: 44px 52px;
+  }
+
+  #benefits .benefits-grid .benefit-card--needs {
+    order: 3;
+    min-height: 315px;
+    padding: 44px 52px;
+  }
+
+  #benefits .benefits-grid .benefit-card--processing {
+    order: 4;
+    min-height: 292px;
+    padding: 40px 52px;
+  }
+
+  #benefits .benefits-grid .benefit-card--team-stat {
+    order: 5;
+    min-height: 292px;
+    padding: 40px 52px;
+  }
+
+  #benefits .benefits-grid .benefit-card--secure {
+    order: 6;
+    grid-column: 1 / -1;
+    min-height: 235px;
+    padding: 42px 50px;
+  }
+
+  #benefits .benefits-grid .benefit-card__content {
+    position: relative;
+    z-index: 3;
+    opacity: 1;
+    transform: none;
+    max-width: 54%;
+  }
+
+  #benefits .benefits-grid .benefit-card strong {
+    font-size: clamp(2rem, 3vw, 2.8rem);
+    line-height: 0.96;
+    letter-spacing: -0.035em;
+    text-shadow: 0 2px 16px rgba(0, 0, 0, 0.34);
+  }
+
+  #benefits .benefits-grid .benefit-card p {
+    opacity: 1;
+    transform: none;
+    font-size: clamp(1.05rem, 1.55vw, 1.45rem);
+    line-height: 1.48;
+    margin-top: 24px;
+    max-width: 100%;
+    color: rgba(245, 247, 241, 0.86);
+  }
+
+  .benefit-card--trust .benefit-card__content {
+    max-width: 48%;
+  }
+
+  .benefit-card--trust .benefit-card__image--trust {
+    position: absolute;
+    right: 7%;
+    bottom: 8%;
+    width: min(31%, 310px);
+    max-height: 82%;
+    object-fit: contain;
+    z-index: 2;
+    filter: drop-shadow(0 24px 34px rgba(114, 255, 76, 0.22));
+  }
+
+  .benefit-card--limit {
+    background:
+      linear-gradient(153deg, transparent 0 58%, rgba(238, 255, 187, 0.32) 58.4%, transparent 59%),
+      radial-gradient(circle at 80% 72%, rgba(187, 255, 86, 0.38), transparent 24%),
+      linear-gradient(135deg, #77b93b 0%, #3a7d25 48%, #122915 100%);
+  }
+
+  #benefits .benefit-card--limit .benefit-card__content {
+    display: block;
+    width: 62%;
+    max-width: 60%;
+    margin-left: 0;
+    padding-right: 18px;
+    text-align: left;
+    align-self: flex-start;
+  }
+
+  #benefits .benefit-card--limit .benefit-card__content p:first-child {
+    transform: none;
+    opacity: 1;
+  }
+
+  #benefits .benefit-card--limit .benefit-card__content p:last-child {
+    position: static;
+    opacity: 1;
+    transform: none;
+    margin-top: 22px;
+  }
+
+  #benefits .benefit-card--limit::after {
+    content: "\221E";
+    position: absolute;
+    right: 8%;
+    bottom: 17%;
+    color: rgba(187, 255, 102, 0.94);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(7rem, 13vw, 11rem);
+    font-weight: 900;
+    line-height: 0.7;
+    text-shadow:
+      0 0 14px rgba(158, 255, 87, 0.82),
+      0 0 34px rgba(112, 255, 68, 0.54),
+      0 18px 28px rgba(0, 0, 0, 0.28);
+    z-index: 2;
+    transform: rotate(-10deg);
+  }
+
+  .benefit-card--needs {
+    background:
+      linear-gradient(153deg, transparent 0 58%, rgba(170, 255, 105, 0.28) 58.4%, transparent 59%),
+      radial-gradient(circle at 76% 58%, rgba(122, 255, 86, 0.3), transparent 24%),
+      linear-gradient(135deg, rgba(13, 26, 20, 0.98), rgba(16, 38, 25, 0.98) 58%, rgba(7, 16, 27, 0.98));
+  }
+
+  #benefits .benefit-card--needs .benefit-card__content {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    width: 58%;
+    max-width: 58%;
+    margin-left: 0;
+    padding-right: 18px;
+    z-index: 3;
+    transform: none;
+    align-self: flex-start;
+  }
+
+  #benefits .benefit-card--needs strong {
+    max-width: 10ch;
+    font-size: 0 !important;
+    color: transparent;
+  }
+
+  #benefits .benefit-card--needs strong::after {
+    content: "NICHES";
+    display: block;
+    font-size: clamp(2rem, 3vw, 2.8rem);
+    line-height: 0.96;
+    color: #fff;
+  }
+
+  #benefits .benefit-card--needs .benefit-card__content p {
+    font-size: clamp(1.02rem, 1.4vw, 1.32rem);
+    line-height: 1.45;
+  }
+
+  .benefit-card__logos {
+    position: absolute;
+    right: 9%;
+    bottom: 18%;
+    width: 25%;
+    height: 42%;
+    z-index: 2;
+  }
+
+  .benefit-card__logos img {
+    position: absolute;
+    object-fit: contain;
+  }
+
+  .benefit-card__logos img:first-child {
+    display: none;
+  }
+
+  .benefit-card__logos img:last-child {
+    width: min(100%, 150px);
+    right: 0;
+    bottom: 0;
+    transform: rotate(-10deg);
+    filter:
+      drop-shadow(0 0 18px rgba(157, 255, 87, 0.7))
+      drop-shadow(0 18px 24px rgba(0, 0, 0, 0.3));
+  }
+
+  .benefit-card--processing {
+    align-items: flex-start;
+    background:
+      linear-gradient(153deg, transparent 0 58%, rgba(120, 255, 82, 0.22) 58.4%, transparent 59%),
+      radial-gradient(circle at 80% 72%, rgba(97, 255, 86, 0.22), transparent 26%),
+      linear-gradient(135deg, rgba(8, 18, 16, 0.98), rgba(18, 38, 26, 0.98) 58%, rgba(7, 16, 28, 0.98));
+  }
+
+  #benefits .benefit-card--processing .benefit-card__content {
+    width: 62%;
+    max-width: 62%;
+    margin-left: 0;
+    padding-right: 18px;
+    transform: none;
+    align-self: flex-start;
+  }
+
+  #benefits .benefit-card--processing .benefit-card__content p {
+    opacity: 1;
+    transform: none;
+  }
+
+  #benefits .benefit-card--processing::after {
+    content: "";
+    position: absolute;
+    right: 9%;
+    bottom: 12%;
+    width: min(28%, 160px);
+    aspect-ratio: 1.42;
+    border: 3px solid rgba(168, 255, 101, 0.42);
+    border-radius: 16px;
+    background:
+      linear-gradient(90deg, rgba(218, 255, 138, 0.78) 0 18%, transparent 18% 100%) 18% 72% / 44% 10% no-repeat,
+      linear-gradient(rgba(94, 176, 57, 0.88), rgba(94, 176, 57, 0.88)) 54% 42% / 48% 12% no-repeat,
+      linear-gradient(rgba(94, 176, 57, 0.72), rgba(94, 176, 57, 0.72)) 54% 58% / 52% 10% no-repeat,
+      radial-gradient(circle at 18% 18%, #a9ff56 0 6%, transparent 7%),
+      radial-gradient(circle at 30% 18%, #a9ff56 0 6%, transparent 7%),
+      radial-gradient(circle at 42% 18%, #a9ff56 0 6%, transparent 7%),
+      linear-gradient(135deg, rgba(94, 197, 52, 0.95), rgba(38, 102, 34, 0.98));
+    box-shadow:
+      0 0 28px rgba(113, 255, 75, 0.34),
+      0 20px 30px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+    transform: rotate(-13deg);
+  }
+
+  .benefit-card--team-stat {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background:
+      linear-gradient(153deg, transparent 0 58%, rgba(120, 255, 82, 0.22) 58.4%, transparent 59%),
+      radial-gradient(circle at 78% 62%, rgba(122, 255, 86, 0.32), transparent 25%),
+      linear-gradient(135deg, rgba(8, 18, 16, 0.98), rgba(18, 38, 26, 0.98) 58%, rgba(7, 16, 28, 0.98));
+  }
+
+  #benefits .benefit-card--team-stat .benefit-card__content {
+    width: 58%;
+    max-width: 58%;
+    margin-left: 0;
+    padding-right: 18px;
+    text-align: left;
+    transform: none;
+    align-self: flex-start;
+  }
+
+  .benefit-card__metric--small {
+    font-size: clamp(2.2rem, 3.2vw, 3.2rem);
+    line-height: 0.95;
+    letter-spacing: -0.045em;
+  }
+
+  #benefits .benefit-card--team-stat::after {
+    content: "";
+    position: absolute;
+    right: 7%;
+    bottom: 9%;
+    width: min(34%, 190px);
+    aspect-ratio: 1.35;
+    background:
+      radial-gradient(circle at 50% 22%, #9eff57 0 15%, transparent 16%),
+      radial-gradient(circle at 20% 34%, #80da3f 0 13%, transparent 14%),
+      radial-gradient(circle at 80% 34%, #80da3f 0 13%, transparent 14%),
+      radial-gradient(ellipse at 50% 86%, #78cf3d 0 34%, transparent 35%),
+      radial-gradient(ellipse at 20% 90%, #5eb431 0 24%, transparent 25%),
+      radial-gradient(ellipse at 80% 90%, #5eb431 0 24%, transparent 25%);
+    filter:
+      drop-shadow(0 0 18px rgba(157, 255, 87, 0.58))
+      drop-shadow(0 18px 24px rgba(0, 0, 0, 0.3));
+    z-index: 2;
+  }
+
+  .benefit-card--secure {
+    background:
+      radial-gradient(circle at 78% 45%, rgba(154, 255, 72, 0.34), transparent 24%),
+      linear-gradient(135deg, rgba(25, 66, 27, 0.98), rgba(58, 122, 37, 0.96) 54%, rgba(95, 160, 45, 0.96));
+  }
+
+  .benefit-card--secure .benefit-card__content {
+    max-width: 48%;
+  }
+
+  .benefit-card--secure .benefit-card__image--secure {
+    position: absolute;
+    right: 8%;
+    bottom: 0;
+    width: min(27%, 250px);
+    max-height: 92%;
+    object-fit: contain;
+    z-index: 2;
+    filter: drop-shadow(0 22px 30px rgba(0, 0, 0, 0.28));
   }
 
   .contact-card {
