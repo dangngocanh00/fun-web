@@ -2856,14 +2856,17 @@ body.faq-open {
 
   .benefits-title .section-title-bg {
     position: absolute;
-    top: -4px;
+    top: -46px;
     left: 0;
     width: 100%;
     margin: 0;
     font-size: clamp(6rem, 11vw, 8.8rem);
     line-height: 0.9;
     letter-spacing: 0.08em;
-    opacity: 0.14;
+    opacity: 0.58;
+    text-shadow: 0 14px 42px rgba(0, 0, 0, 0.62);
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.18) 9%, #000 24%, #000 76%, rgba(0, 0, 0, 0.18) 91%, transparent 100%);
+    mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.18) 9%, #000 24%, #000 76%, rgba(0, 0, 0, 0.18) 91%, transparent 100%);
     transform: none;
   }
 
@@ -2981,8 +2984,9 @@ body.faq-open {
     color: rgba(245, 247, 241, 0.86);
   }
 
-  .benefit-card--trust .benefit-card__content {
+  #benefits .benefits-grid .benefit-card--trust .benefit-card__content {
     max-width: 48%;
+    transform: translate(24px, 50px);
   }
 
   .benefit-card--trust .benefit-card__image--trust {
@@ -3011,6 +3015,12 @@ body.faq-open {
     padding-right: 18px;
     text-align: left;
     align-self: flex-start;
+    transform: translate(-45px, -28px);
+  }
+
+  #benefits .benefit-card--limit strong {
+    max-width: 11.5ch;
+    text-align: left;
   }
 
   #benefits .benefit-card--limit .benefit-card__content p:first-child {
@@ -3028,8 +3038,8 @@ body.faq-open {
   #benefits .benefit-card--limit::after {
     content: "\221E";
     position: absolute;
-    right: 8%;
-    bottom: 17%;
+    right: 12%;
+    bottom: 45%;
     color: rgba(187, 255, 102, 0.94);
     font-family: Arial, Helvetica, sans-serif;
     font-size: clamp(7rem, 13vw, 11rem);
@@ -3059,7 +3069,7 @@ body.faq-open {
     margin-left: 0;
     padding-right: 18px;
     z-index: 3;
-    transform: none;
+    transform: translate(10px, -20px);
     align-self: flex-start;
   }
 
@@ -3100,11 +3110,11 @@ body.faq-open {
     display: none;
   }
 
-  .benefit-card__logos img:last-child {
+  #benefits .benefit-card--needs .benefit-card__logos img:last-child {
     width: min(100%, 150px);
     right: 0;
     bottom: 0;
-    transform: rotate(-10deg);
+    transform: translateY(-56px) rotate(-25deg);
     filter:
       drop-shadow(0 0 18px rgba(157, 255, 87, 0.7))
       drop-shadow(0 18px 24px rgba(0, 0, 0, 0.3));
@@ -3119,8 +3129,8 @@ body.faq-open {
   }
 
   #benefits .benefit-card--processing .benefit-card__content {
-    width: 62%;
-    max-width: 62%;
+    width: 76%;
+    max-width: 76%;
     margin-left: 0;
     padding-right: 18px;
     transform: none;
